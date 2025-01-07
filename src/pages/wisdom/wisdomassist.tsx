@@ -3,7 +3,7 @@ import React, { FC } from 'react';
 const Page = () => {
   return (
     <div>
-      <h1>工单</h1>
+      <h1>智能辅助</h1>
     </div>
   );
 };
