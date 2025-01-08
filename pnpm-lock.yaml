@@ -8,6 +8,9 @@ importers:
 
   .:
     dependencies:
+      '@ant-design/icons':
+        specifier: ^5.5.2
+        version: 5.5.2(react-dom@17.0.2(react@17.0.2))(react@17.0.2)
       '@ant-design/pro-layout':
         specifier: ^6.5.0
         version: 6.38.22(prop-types@15.8.1)(react-dom@17.0.2(react@17.0.2))(react@17.0.2)

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Layout, Menu, ConfigProvider } from 'antd';
-import { Link, useHistory } from 'umi';
+import { Link, Route, useHistory } from 'umi';
 const { Header, Content, Footer } = Layout;
 import styles from '../layouts/index.less';
 
@@ -18,6 +18,8 @@ const orerMenu = [
   { router: '/wisdom/wisdomassist', name: '智能辅助' },
   { router: '/order/createOrder', name: '工单' },
   { router: '/manger/guanyiyun', name: '管易云' },
+  { route: '/', name: '测试链接' },
+  { route: '/', name: 'AC测试环境' },
 ];
 
 interface HeaderInfo {
@@ -46,13 +48,7 @@ function BasicLayout(props) {
   const back = () => {
     history.push('/hero');
   };
-  // if (!isPathInEnumData) {
-  //   return <Content>{props.children}</Content>;
-  // }
-  // const isOrder = location.pathname === enumData[3].router;
-  // if (isOrder) {
-  //   return <Content>{props.children}</Content>;
-  // }
+
   // 是否为工单界面
   const isOrder = orerMenu.some((item) => item.router === location.pathname);
   if (isOrder) {
@@ -105,6 +101,11 @@ function BasicLayout(props) {
       </div>
     );
   }
+  // 是否需要使用布局
+  if (!isPathInEnumData) {
+    return <Content>{props.children}</Content>;
+  }
+
   return (
     <Layout>
       <Header>

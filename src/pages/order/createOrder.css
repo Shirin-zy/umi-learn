@@ -1,0 +1,21 @@
+* {
+  box-sizing: border-box;
+}
+.header {
+  height: 60px;
+  display: flex;
+}
+.header div {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+.enterOrder :hover {
+  cursor: pointer;
+}
+.enterOrder div {
+  margin-left: 80px;
+  height: 20px;
+  width: 100px;
+  line-height: 20px;
+}
